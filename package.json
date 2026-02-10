@@ -1,0 +1,30 @@
+{
+  "name": "@agrigoryan/questrade-cli",
+  "version": "0.1.0",
+  "description": "CLI for the Questrade API. Agent-friendly, JSON-first output.",
+  "type": "module",
+  "bin": {
+    "questrade": "./bin/questrade",
+    "qt": "./bin/questrade"
+  },
+  "files": ["bin", "dist", "src"],
+  "scripts": {
+    "build": "bun build src/index.ts --outdir dist --target bun",
+    "dev": "bun run src/index.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@agrigoryan/questrade-api": "^0.1.0"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5.7"
+  },
+  "author": "Aram Grigoryan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agrigoryan/questrade-cli"
+  },
+  "sideEffects": false
+}
