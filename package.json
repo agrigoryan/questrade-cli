@@ -4,14 +4,14 @@
   "description": "CLI for the Questrade API. Agent-friendly, JSON-first output.",
   "type": "module",
   "bin": {
-    "questrade": "./bin/questrade",
-    "qt": "./bin/questrade"
+    "questrade": "./bin/questrade"
   },
-  "files": ["bin", "dist", "src"],
+  "files": ["bin", "dist"],
   "scripts": {
-    "build": "bun build src/index.ts --outdir dist --target bun",
+    "build": "bun build src/index.ts --outdir dist --target node",
     "dev": "bun run src/index.ts",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "bun run typecheck && bun run build"
   },
   "dependencies": {
     "@agrigoryan/questrade-api": "^0.1.0"
