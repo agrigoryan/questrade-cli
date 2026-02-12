@@ -2,18 +2,18 @@
 
 Use the `questrade` CLI to interact with the Questrade brokerage API. This tool provides full access to account data, market data, symbol lookup, order management, and streaming -- all from the command line with JSON output optimized for agent consumption.
 
-## Location
+## Installation
 
-The CLI lives at `~/devel/money/questrade-cli`. Run via:
-```
-~/devel/money/questrade-cli/bin/questrade <command> [flags]
+```bash
+npm install -g @agrigoryan/questrade-cli
 ```
 
-Or if linked/installed:
+Then run:
 ```
 questrade <command> [flags]
-qt <command> [flags]          # short alias
 ```
+
+Requires Node.js (no Bun needed at runtime).
 
 ## Output Behavior
 
